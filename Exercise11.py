@@ -14,6 +14,13 @@ def reverse(x) :
         x=x//10
     return res
 
+# 114 예시
+# t = 4  --> res = 4 --> x --> 11
+# t = 1 -->  res = 41 --> x --> 1
+# t = 1 --> res = 411 --> x --> 0
+#break
+#res = 411
+
 def isPrime(x) :
     if x == 1:
         return False
@@ -22,6 +29,8 @@ def isPrime(x) :
             return False
     else :
         return True
+
+
 
 
 n = int(input())
