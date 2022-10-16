@@ -7,8 +7,8 @@ n = input()
 a = 0
 b=0
 for i in n :
-    if i.isdecimal() :
-        a = a*10+int(i)
+    if i.isdecimal() :         # isdigit ==> 숫자 형태 다 뻡기
+        a = a*10+int(i)        # isdecimal ==> 0~9 숫자 뽑기
 
 for i in range(1, a+1) :
     if a % i ==0:
