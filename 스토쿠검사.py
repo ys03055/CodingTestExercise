@@ -14,8 +14,8 @@ def check(a):
         if sum(ch1)!=9 or sum(ch2)!=9:
             return False
     
-    for i in range(3):
-        for j in range(3):
+    for i in range(3):    #3*3 중복 확인
+        for j in range(3):   
             ch3=[0]*10
             for k in range(3):
                 for s in range(3):
