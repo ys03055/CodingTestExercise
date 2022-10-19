@@ -1,6 +1,13 @@
 import sys
 sys.stdin=open("input.txt", "r")
-
+def Count(len):
+    cnt=1
+    ep=Line[0]
+    for i in range(1, n):
+        if Line[i]-ep>=len:
+            cnt+=1
+            ep=Line[i]
+    return cnt
 
 n, c=map(int, input().split())
 Line=[]
