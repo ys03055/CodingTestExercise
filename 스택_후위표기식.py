@@ -5,6 +5,7 @@ import sys
 
 #중위표기식을 후위표기식으로 바꾸기
 #stack --> LIFO
+#조건문 세분화
 
 a = input()
 stack = []
@@ -16,14 +17,14 @@ for x in a :
         if x =='(' :
             stack.append(x)
         elif x == '*' or x =='/':
-            while stack and (stack[-1] == '*' or stacl[-1]=='/') :
+            while stack and (stack[-1] == '*' or stack[-1]=='/') :
                 res +=stack.pop()
             stack.append(x)
         elif x == '+' or x =='-' :
             while stack and stack[-1] != '(' :
                 res+=stack.pop()
             stack.append(x)
-        elif x == ')' :
+        elif x == ')' :     #괄호 안 수식부터 처리해야함
             while stack and stack[-1] != '(' :
                 res+=stack.pop()
             stack.pop()
